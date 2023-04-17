@@ -12,48 +12,48 @@ def main():
     curr = 1
     frameCount = 0
 
-    while True:  # making a loop
+    while True:  # game-play Loop
         if frameCount == 0:
             clear_grid(grid)
             newBlock = True
         if newBlock:
             curr = choose_new_tetrimino()
             newBlock = False
-        if curr == 1: #square
+        if curr == 1: # square
             grid[0][5] = "#"
             grid[0][4] = "#"
             grid[1][5] = "#"
             grid[1][4] = "#"
-        elif curr == 2: #line piece
-            grid[0][5] = "#"
-            grid[1][5] = "#"
-            grid[2][5] = "#"
-            grid[3][5] = "#"
-        elif curr == 3: #L block
-            grid[0][5] = "#"
-            grid[1][5] = "#"
-            grid[2][5] = "#"
-            grid[2][6] = "#"
-        elif curr == 4: #reverse L block
-            grid[0][5] = "#"
-            grid[1][5] = "#"
-            grid[2][5] = "#"
-            grid[2][4] = "#"
-        elif curr == 5: #T Block
-            grid[0][5] = "#"
-            grid[0][6] = "#"
-            grid[0][4] = "#"
-            grid[1][5] = "#"
-        elif curr == 6: #S block
-            grid[0][4] = "#"
-            grid[0][5] = "#"
-            grid[1][5] = "#"
-            grid[1][6] = "#"
-        elif curr == 7: #Z block
-            grid[0][5] = "#"
-            grid[0][6] = "#"
-            grid[1][5] = "#"
-            grid[1][4] = "#"
+        elif curr == 2: # line piece
+            grid[0][5] = "[]"
+            grid[1][5] = "[]"
+            grid[2][5] = "[]"
+            grid[3][5] = "[]"
+        elif curr == 3: # L block
+            grid[0][5] = "@"
+            grid[1][5] = "@"
+            grid[2][5] = "@"
+            grid[2][6] = "@"
+        elif curr == 4: # reverse L block
+            grid[0][5] = "&"
+            grid[1][5] = "&"
+            grid[2][5] = "&"
+            grid[2][4] = "&"
+        elif curr == 5: # T Block
+            grid[0][5] = "Ω"
+            grid[0][6] = "Ω"
+            grid[0][4] = "Ω"
+            grid[1][5] = "Ω"
+        elif curr == 6: # S block
+            grid[0][4] = "$"
+            grid[0][5] = "$"
+            grid[1][5] = "$"
+            grid[1][6] = "$"
+        elif curr == 7: # Z block
+            grid[0][5] = "ß"
+            grid[0][6] = "ß"
+            grid[1][5] = "ß"
+            grid[1][4] = "ß"
 
 
         print_grid(grid)
@@ -64,6 +64,9 @@ def main():
         frameCount+=1
         if frameCount == 200:
             frameCount = 0
+    return
+
+def move_cur_block_down(grid, curr, xpos, ypos, rotate):
     return
 
 
